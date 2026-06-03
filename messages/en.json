@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "title": "José Fernando García Pérez — Senior Geospatial Data Engineer & Data Analyst",
+    "description": "Senior Geospatial Data Engineer & Data Analyst. 20+ years GIS, 6+ years data analytics. Power BI, Python, Mapbox, SQL. Open to remote (USD/EUR). Medellín, Colombia.",
+    "siteName": "José Fernando García Pérez",
+    "keywords": "Geospatial Data Engineer, Data Analyst, GIS, Power BI, Python, Mapbox, SQL, Medellín, remote"
+  },
+  "nav": {
+    "capabilities": "Capabilities",
+    "work": "Work",
+    "demos": "Demos",
+    "stack": "Stack",
+    "about": "About",
+    "contact": "Contact",
+    "hire": "Hire",
+    "name": "José F. García",
+    "toggleLocale": "ES"
+  },
+  "hero": {
+    "status": "Open to work · Remote (USD/EUR) · Hybrid Colombia",
+    "pre": "Senior Geospatial Data Engineer & Data Analyst",
+    "skills": "GIS · Power BI · Python · Mapbox · SQL",
+    "line1": "Building data systems",
+    "line2": "for governments,",
+    "line3": "infrastructure",
+    "line4": "& risk management.",
+    "sub": "Civil engineer with 20+ years in geospatial intelligence and 6+ years as a data analyst. I design pipelines that hold up under regulatory audits and ship dashboards that survive board meetings.",
+    "ctaPrimary": "View work",
+    "ctaSecondary": "Get in touch",
+    "stats": [
+      { "key": "projects", "sym": "+", "label": "Projects shipped", "desc": "Government · Infrastructure · Environment" },
+      { "key": "years", "sym": "+", "label": "Years in geospatial", "desc": "GIS · Cartography · Spatial analysis" },
+      { "key": "analytics", "sym": "+", "label": "Years as data analyst", "desc": "Power BI · DAX · Python · Mapbox" },
+      { "key": "specs", "sym": "", "label": "Specializations", "desc": "Big Data · GIS · Soil Mechanics" }
+    ]
+  },
+  "capabilities": {
+    "sectionLabel": "Capabilities",
+    "title": "What I deliver",
+    "sub": "Three roles, one engineer. Hire me for any of the following.",
+    "items": [
+      {
+        "icon": "database",
+        "tag": "Data Engineering",
+        "title": "Cloud data pipelines & geospatial ETL",
+        "desc": "Production pipelines from raw spatial data to clean analytics layers. Python automation, PostGIS, ArcPy, Azure Data Factory. Built for institutional scale.",
+        "deliverables": ["ETL automation", "Geospatial pipelines", "Data warehousing", "Quality monitoring"]
+      },
+      {
+        "icon": "chart",
+        "tag": "Analytics Engineering",
+        "title": "Executive dashboards & semantic models",
+        "desc": "Power BI dashboards with complex DAX, star and bridge models, Power Query M transformations. The kind that survives board scrutiny and audit cycles.",
+        "deliverables": ["Power BI senior", "DAX modeling", "KPI frameworks", "Self-service BI"]
+      },
+      {
+        "icon": "map",
+        "tag": "GIS Specialist",
+        "title": "Spatial systems & national-standard databases",
+        "desc": "Geodatabases under ANLA / IGAC standards. Multi-criteria spatial models. Hydrological networks. MAGNA-SIRGAS CTM12 reprojection. ArcGIS Pro, QGIS, PostGIS.",
+        "deliverables": ["ANLA/IGAC compliance", "Spatial modeling", "Geostatistics", "Web GIS"]
+      }
+    ]
+  },
+  "featured": {
+    "sectionLabel": "Featured project",
+    "inProduction": "IN PRODUCTION",
+    "client": "Municipality of Medellín · DAP · 2025",
+    "titleBefore": "RAG-based AI assistant for the",
+    "titleHighlight": "322-page POT",
+    "titleAfter": "urban-planning document",
+    "desc": "A retrieval-augmented generation system deployed in production for the City of Medellín. Lets urban-planning teams query the territorial plan in natural language and retrieve grounded answers with citations to the source document.",
+    "pagesIndexed": "Pages indexed",
+    "avgResponse": "Avg. response",
+    "citedSources": "Cited sources",
+    "spanishLlm": "Spanish LLM",
+    "viewDemo": "View live demo",
+    "seeMore": "See more work",
+    "disclaimer": "Live system in production for the City of Medellín. Access credentials available on request for serious inquiries.",
+    "mockWindow": "rag-pot-medellin · DAP",
+    "userQuestion": "¿Cuáles son las áreas de protección ambiental establecidas en el POT?",
+    "aiAnswerIntro": "Según el POT vigente, las áreas de protección ambiental se clasifican en:",
+    "aiAnswerItems": ["1. Áreas de retiro a corrientes hídricas", "2. Bosques de protección", "3. Zonas de manejo especial"],
+    "sources": "Sources:",
+    "inputPlaceholder": "Ask anything about the POT...",
+    "previewNote": "Sanitized UI preview · Actual interface includes authentication"
+  },
+  "work": {
+    "sectionLabel": "Work",
+    "title": "Selected work",
+    "sub": "Active engagements with government agencies and infrastructure operators.",
+    "activeBadge": "ACTIVE",
+    "impactLabel": "Impact",
+    "transparencyTitle": "Public-transparency work",
+    "transparencyDesc": "AMVA and DAP-Medellín dashboards are linked from their case studies with inline preview. Additional reports are published as they pass data review.",
+    "comingTitle": "Coming next",
+    "comingDesc": "Open-data demos built from Colombian public datasets · GitHub repos · Detailed case studies · Embedded interactive maps.",
+    "viewCaseStudy": "Read case study",
+    "viewDashboard": "View live dashboard",
+    "liveDashboards": "live dashboards",
+    "gisFocusBadge": "GIS · geodatabases · SQL · Python",
+    "dashboardsPending": "Live dashboard links are added after data review and anonymization.",
+    "filters": [
+      { "id": "all", "label": "All" },
+      { "id": "engineering", "label": "Engineering" },
+      { "id": "analytics", "label": "Analytics" },
+      { "id": "gis", "label": "GIS" }
+    ],
+    "items": [
+      {
+        "id": "01",
+        "slug": "amva",
+        "client": "AMVA",
+        "clientFull": "Área Metropolitana del Valle de Aburrá",
+        "role": "Senior GIS & Data Analyst",
+        "period": "2024 — Present",
+        "active": true,
+        "impact": "4 production Power BI dashboards for permits, sanctions, action plan, and urban tree-risk monitoring",
+        "desc": "Four senior Power BI dashboards with DAX for business-day deadlines and audit-ready KPIs. Python/ArcPy pipelines feed semantic models from geodatabases in MAGNA-SIRGAS CTM12.",
+        "deliverables": ["Permit compliance tracker", "Sanction workflows", "Action plan dashboard", "Tree-risk monitoring"],
+        "tags": ["engineering", "analytics", "gis"],
+        "stack": ["Power BI", "DAX", "ArcPy", "React", "Supabase"],
+        "mockType": "dashboard",
+        "hasCaseStudy": true
+      },
+      {
+        "id": "02",
+        "slug": "medellin-dap",
+        "client": "Municipality of Medellín",
+        "clientFull": "Departamento Administrativo de Planeación (DAP)",
+        "role": "Data Analyst & GIS Specialist",
+        "period": "2024 — Present",
+        "active": true,
+        "impact": "7 Power BI dashboards + 1 RAG-based AI assistant for the 322-page POT urban-planning document",
+        "desc": "Built dashboards for legal-tracking, anywhere-access KPIs, UPT-POT formal communications, strategic-revision topics, participatory process, 2025 POT roundtable monitoring, and a web portfolio for the subdirectorate. Star and bridge models in Power Query / M. ArcPy automation for multi-criteria urban planning.",
+        "deliverables": ["Legal-tracking dashboard", "Anywhere KPI access", "POT roundtable monitor", "Strategic-revision dashboard", "Participatory process", "Subdirectorate web portfolio"],
+        "tags": ["analytics", "gis", "engineering"],
+        "stack": ["Power BI", "Power Query", "ModelBuilder", "Web design"],
+        "mockType": "kpi",
+        "hasCaseStudy": true
+      },
+      {
+        "id": "03",
+        "slug": "devimed",
+        "client": "DEVIMED",
+        "clientFull": "DEVIMED S.A. — Concession authority",
+        "role": "GIS Engineer & Data Analyst",
+        "period": "2018 — Present",
+        "active": true,
+        "impact": "40+ concession road projects: geodatabases, SQL, and Python/ArcPy automation for ANI/ANLA compliance",
+        "desc": "No public dashboards — value is in FGDB layers, SQL queries, spatial validation scripts, and predictive models for corridors, works, and regulatory compliance.",
+        "deliverables": ["Corridor geodatabases", "SQL analytics", "Python/ArcPy scripts", "ANI/ANLA spatial models"],
+        "tags": ["engineering", "gis"],
+        "stack": ["ArcGIS", "FGDB", "SQL Server", "Python", "ANI", "ANLA"],
+        "mockType": "geodata"
+      },
+      {
+        "id": "04",
+        "slug": "bioexplora",
+        "client": "Bioexplora",
+        "clientFull": "Bioexplora S.A.S.",
+        "role": "GIS Engineer · Database specialist",
+        "period": "2012 — 2024",
+        "active": false,
+        "impact": "80+ GIS projects: geodatabases, PostGIS/SQL, cartography, and Python scripts for risk and territorial planning",
+        "desc": "Field and technical-office work: geodatabase design, spatial queries, geostatistics, and ArcPy pipelines — no Power BI dashboards for this client.",
+        "deliverables": ["Project geodatabases", "PostGIS / SQL", "GIS cartography", "Python / ArcPy scripts"],
+        "tags": ["gis", "engineering"],
+        "stack": ["ArcGIS", "PostGIS", "SQL", "Python", "Geostatistics"],
+        "mockType": "geodata"
+      },
+      {
+        "id": "05",
+        "slug": "iatech",
+        "client": "IATECH",
+        "clientFull": "IATECH | Mun. Medellín",
+        "role": "Data Analyst & GIS Engineer",
+        "period": "2021 — 2023",
+        "active": false,
+        "impact": "Financial dashboards for shopping center management",
+        "tags": ["analytics", "engineering"],
+        "stack": ["Python", "Dashboards", "ArcGIS"],
+        "mockType": "kpi"
+      },
+      {
+        "id": "06",
+        "slug": "antioquia",
+        "client": "Government of Antioquia",
+        "clientFull": "Gobernación de Antioquia",
+        "role": "GIS Engineer · Database Specialist",
+        "period": "2012 — 2020",
+        "active": false,
+        "impact": "Departmental geodatabases, SQL, and multi-criteria spatial models for Antioquia planning",
+        "desc": "Designed and maintained institutional FGDBs, ArcPy ETL, and SQL for departmental reference layers.",
+        "deliverables": ["Departmental FGDBs", "ArcPy ETL", "Spatial SQL", "Multi-criteria models"],
+        "tags": ["gis", "engineering"],
+        "stack": ["ArcGIS", "FGDB", "SQL", "ArcPy"],
+        "mockType": "geodata"
+      }
+    ]
+  },
+  "dashboards": {
+    "amva": {
+      "permisos": "Environmental permit compliance",
+      "planAccion": "Environmental presentation & action plan",
+      "sancionatorios": "Sanction workflows",
+      "arboles": "Urban tree-risk monitoring"
+    },
+    "medellin-dap": {
+      "presentacionAmva": "Environmental presentation (AMVA)",
+      "juridico": "Legal tracking",
+      "anywhere": "Anywhere KPI access",
+      "oficiosUptPot": "UPT-POT formal communications",
+      "temasEstrategicos": "Strategic revision topics",
+      "procesoParticipativo": "Participatory process",
+      "mesasPot2025": "POT 2025 roundtable monitoring",
+      "portafolioSubdireccion": "Subdirectorate web portfolio"
+    }
+  },
+  "caseStudies": {
+    "backToWork": "Back to work",
+    "jumpGallery": "Dashboard previews",
+    "jumpLive": "Live dashboards",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "outcome": "Outcome",
+    "deliverables": "Deliverables",
+    "metrics": "Key metrics",
+    "galleryTitle": "Dashboard previews",
+    "gallerySub": "Screenshots from production Power BI reports. Click a card to load the live embed below.",
+    "gallerySelect": "Click to preview live",
+    "gallerySelected": "Showing live below",
+    "viewLive": "View live",
+    "galleryExtrasTitle": "More views",
+    "galleryExtrasSub": "Additional report pages and the subdirectorate web portfolio on Netlify.",
+    "extraGobernanza": "Governance (SPTEC web)",
+    "extraMacroRio": "Macro-project Río Norte",
+    "extraOficiosAlertas": "UPT filings — alerts",
+    "extraMesasTecnicas": "POT 2025 — technical tables",
+    "liveDashboards": "Live dashboards",
+    "embedNote": "Public transparency dashboards · Select a report to preview inline or open full screen.",
+    "ragLiveCta": "Live RAG demo",
+    "ragCaseLink": "RAG POT case study",
+    "relatedProject": "Related engagement",
+    "amva": {
+      "title": "AMVA — Environmental compliance analytics",
+      "summary": "Four production Power BI dashboards for metropolitan permitting, sanctions, action plan, and urban tree-risk under citizen-transparency requirements.",
+      "challenge": "AMVA needed traceable compliance views across permit lifecycles, sanction flows, and tree-risk cases — with business-day logic, spatial context, and audit-ready KPIs.",
+      "approach": "Star and detail models in Power BI with complex DAX for deadlines and status transitions. Python/ArcPy pipelines maintain geodatabases and MAGNA-SIRGAS CTM12 layers feeding semantic models.",
+      "outcome": "Leadership and technical teams share one source of truth for permit status, sanctions, and risk monitoring — reducing manual reporting and improving response times on high-priority cases.",
+      "metrics": [
+        { "value": "4", "label": "Dashboards in production" },
+        { "value": "DAX", "label": "Business-day deadline logic" },
+        { "value": "ArcPy", "label": "Geodatabase automation" }
+      ]
+    },
+    "medellin-dap": {
+      "title": "Medellín DAP — Urban planning intelligence",
+      "summary": "Seven Power BI dashboards plus a subdirectorate web portfolio supporting POT revision, legal tracking, and participatory planning processes.",
+      "challenge": "DAP required coordinated analytics across juridical follow-up, strategic revision themes, participatory processes, and executive KPIs — while integrating spatial planning workflows.",
+      "approach": "Power Query M models with star/bridge patterns, executive dashboards for each workstream, and ArcPy for multicriteria spatial analysis. RAG assistant documented separately.",
+      "outcome": "Planning teams monitor POT revision milestones, legal commitments, and participation metrics from unified dashboards used in internal and transparency contexts.",
+      "metrics": [
+        { "value": "8", "label": "Live reports + web portfolio" },
+        { "value": "686", "label": "UPT filings tracked" },
+        { "value": "491", "label": "Participatory proposals" }
+      ]
+    },
+    "rag-pot-medellin": {
+      "title": "RAG assistant — POT Medellín (322 pages)",
+      "summary": "Production retrieval-augmented generation system letting planners query the territorial plan in Spanish with cited sources.",
+      "challenge": "A 322-page legal/technical POT is impractical to search manually during meetings and revision cycles. Teams needed grounded answers, not hallucinations.",
+      "approach": "Document chunking, vector retrieval, Spanish LLM orchestration, and citation-first response formatting. Deployed on Render with authenticated access for DAP teams.",
+      "outcome": "~5s average responses with page-level citations. Reduces time to locate norms on environmental protection, land use, and strategic revision topics.",
+      "metrics": [
+        { "value": "322", "label": "Pages indexed" },
+        { "value": "~5s", "label": "Avg. response time" },
+        { "value": "100%", "label": "Answers with sources" }
+      ]
+    }
+  },
+  "demos": {
+    "sectionLabel": "Public demos",
+    "title": "Owned demos & open data",
+    "sub": "Showpieces built on Colombian public datasets and open-source stacks — fully under my control for international portfolios.",
+    "openDataTitle": "Colombia open-data analytics",
+    "openDataDesc": "Dashboard prototype using datos.gov.co and Medellín open-data catalogs — environmental and territorial indicators with reproducible Python/Power BI pipelines.",
+    "openDataCta": "View open-data demo",
+    "openDataSoon": "Demo URL configured in .env.local — add NEXT_PUBLIC_OPEN_DATA_DEMO_URL when published.",
+    "ragTitle": "RAG over public planning docs",
+    "ragDesc": "Production RAG for Medellín POT (featured above). Next: open-source replica on a public regulation with GitHub repo.",
+    "ragCta": "Live RAG demo",
+    "githubCta": "GitHub profile",
+    "caseStudyLink": "Case study",
+    "backToDemos": "Back to demos"
+  },
+  "caseStudyPage": {
+    "notFound": "Case study not found"
+  },
+  "stack": {
+    "sectionLabel": "Stack",
+    "title": "Stack",
+    "sub": "Refined across 150+ delivered projects.",
+    "tools": "tools",
+    "certsTitle": "Education & credentials",
+    "groups": [
+      {
+        "name": "Daily",
+        "tone": "primary",
+        "items": ["Power BI", "DAX", "Power Query · M", "Python", "Pandas", "ArcPy", "PostgreSQL", "PostGIS", "ArcGIS Pro", "QGIS", "JavaScript", "React"]
+      },
+      {
+        "name": "Active learning",
+        "tone": "secondary",
+        "items": ["Azure", "Databricks", "Microsoft Fabric", "Supabase", "Cursor AI"]
+      }
+    ],
+    "certs": [
+      { "year": "2026", "label": "Azure · Databricks · Fabric", "tag": "In progress", "variant": "inProgress" },
+      { "year": "2021", "label": "Esp. Big Data — U. EIA", "tag": "Postgrad", "variant": "completed" },
+      { "year": "2016", "label": "Esp. Soil Mechanics — EAFIT", "tag": "Postgrad", "variant": "completed" },
+      { "year": "2010", "label": "Esp. GIS — U. San Buenaventura", "tag": "Postgrad", "variant": "completed" },
+      { "year": "2006", "label": "Civil Engineer — UNAL", "tag": "Degree", "variant": "completed" }
+    ]
+  },
+  "about": {
+    "sectionLabel": "About",
+    "title": "About",
+    "name": "José Fernando García Pérez",
+    "roles": ["Geospatial Data Engineer", "Data Analyst", "GIS Specialist"],
+    "p1": "Civil engineer (Universidad Nacional de Colombia, 2006) with three postgraduate specializations. Licensed under T.P. 05202139705 ANT.",
+    "p2": "I started with maps. AutoCAD-to-ArcGIS migrations, PostgreSQL spatial databases, geodatabases for governments. Then the data scaled, the dashboards came, and DAX became part of the daily work. Today I build both layers — the spatial pipeline and the analytics on top.",
+    "p3": "Currently expanding into Azure, Databricks and Microsoft Fabric. Working remote, hybrid, or on-site for clients worldwide.",
+    "location": "Medellín, Colombia · UTC−05",
+    "years": "years professional experience",
+    "license": "T.P. 05202139705 ANT",
+    "languagesTitle": "Languages",
+    "spanish": "Español",
+    "spanishLevel": "Native",
+    "english": "English",
+    "englishLevel": "B1 → B2",
+    "availabilityTitle": "Availability",
+    "availability": "Remote · Hybrid · On-site",
+    "availabilitySub": "Worldwide engagements",
+    "headshotAlt": "José Fernando García Pérez",
+    "downloadCv": "Download CV (PDF)",
+    "cvNote": "Place your PDF at public/cv-jose-fernando-garcia.pdf to enable download."
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "title": "Let's build something.",
+    "sub": "Open to senior geospatial data engineering and data analyst roles — remote (USD/EUR), hybrid, or consulting.",
+    "email": "jfgarci206@gmail.com",
+    "whatsapp": "+57 317 660 8420",
+    "linkedin": "José Fernando García Pérez",
+    "linkedinUrl": "linkedin.com/in/josé-fernando-garcía-pérez-3a139021b",
+    "github": "@jfgarci2"
+  },
+  "guide": {
+    "label": "Explore the portfolio",
+    "sub": "Jump straight to case studies with live dashboards and gallery captures.",
+    "amva": "AMVA",
+    "dap": "Medellín DAP",
+    "rag": "RAG POT"
+  },
+  "proof": {
+    "label": "Trusted by public-sector & infrastructure teams",
+    "liveDashboards": "Live Power BI dashboards",
+    "ragProduction": "Production RAG (urban planning)",
+    "activeRoles": "Core delivery roles"
+  },
+  "hire": {
+    "sectionLabel": "Work with me",
+    "title": "Employment or consulting — your choice.",
+    "sub": "6+ years in data analytics and 20+ in GIS. I align with how you hire: full-time remote/hybrid roles or scoped analytics and geospatial projects.",
+    "employmentTitle": "Full-time roles",
+    "employmentDesc": "Senior Data Analyst, Analytics Engineer, or Geospatial Data Engineer. Remote USD/EUR, hybrid in Colombia, or relocation where it fits.",
+    "employmentCta": "Schedule a conversation",
+    "freelanceTitle": "Consulting & contracts",
+    "freelanceDesc": "Power BI semantic models, executive dashboards, GIS pipelines, and RAG prototypes for planning and risk teams.",
+    "freelanceCta": "Email for a scoped proposal",
+    "downloadCv": "Download CV (PDF)",
+    "linkedin": "Connect on LinkedIn"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "available": "Open to remote · USD/EUR",
+    "linkedin": "LinkedIn profile"
+  }
+}

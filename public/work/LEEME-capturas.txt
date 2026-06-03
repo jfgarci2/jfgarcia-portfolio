@@ -1,0 +1,18 @@
+Coloca aquí las imágenes de tus proyectos.
+
+Nombres obligatorios para la grilla "Work" (formato .webp o .png):
+  amva.webp
+  medellin-dap.webp
+  rag-pot-medellin.webp
+  devimed.webp
+  bioexplora.webp
+  iatech.webp
+  antioquia.webp
+
+Opcional (detalle por tablero):
+  dashboards/amva/permisos.webp
+  dashboards/medellin-dap/juridico.webp
+  (ver PORTFOLIO_FASES.md en la raíz del proyecto)
+
+No hace falta PDF para la web; PNG/JPG capturados desde Power BI son mejores.
+Si solo tienes PDF, déjalos en esta carpeta y avisa en el chat.

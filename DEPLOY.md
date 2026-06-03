@@ -17,7 +17,11 @@
 
 3. En [vercel.com](https://vercel.com) → tu proyecto → **Settings → Environment Variables**:
 
-   - `NEXT_PUBLIC_SITE_URL` = URL final (ej. `https://jfgarcia-portfolio.vercel.app`)
+   | Variable | Value | Environments |
+   |----------|--------|--------------|
+   | `NEXT_PUBLIC_SITE_URL` | `https://jfgarcia-portfolio.vercel.app` | Production, Preview |
+
+   (Opcional, cuando exista demo) `NEXT_PUBLIC_OPEN_DATA_DEMO_URL` = URL del tablero.
 
 4. **Redeploy** después de guardar la variable.
 

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { CASE_STUDY_SLUGS } from '@/config/projects';
+import { getSiteUrl } from '@/lib/site-url';
 
 function localePath(locale: string, path: string): string {
   if (locale === routing.defaultLocale) {
@@ -10,7 +11,7 @@ function localePath(locale: string, path: string): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  const baseUrl = getSiteUrl();
   const now = new Date();
 
   const entries: MetadataRoute.Sitemap = [];

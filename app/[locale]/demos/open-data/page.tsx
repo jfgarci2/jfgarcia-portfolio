@@ -70,21 +70,29 @@ export default async function OpenDataDemoPage({ params }: PageProps) {
         </section>
 
         <section className="mb-10 rounded-xl border border-dashed border-stone-300 p-8 text-center">
-          <p className="mb-4 text-sm text-stone-600">
-            {OPEN_DATA_DEMO_URL
-              ? 'Live dashboard is configured. Open it below.'
-              : t('openDataSoon')}
-          </p>
-          {OPEN_DATA_DEMO_URL && (
-            <a
-              href={OPEN_DATA_DEMO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-md bg-[#0A0A0A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#3B5BDB]"
-            >
-              {t('openDataCta')}
-              <ArrowUpRight size={16} />
-            </a>
+          {OPEN_DATA_DEMO_URL ? (
+            <>
+              <p className="mb-4 text-sm text-stone-600">
+                {locale === 'es'
+                  ? 'Tablero en vivo configurado. Ábrelo abajo.'
+                  : 'Live dashboard is configured. Open it below.'}
+              </p>
+              <a
+                href={OPEN_DATA_DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-md bg-[#0A0A0A] px-6 py-3 text-sm font-semibold text-white hover:bg-[#3B5BDB]"
+              >
+                {t('openDataCta')}
+                <ArrowUpRight size={16} />
+              </a>
+            </>
+          ) : process.env.NODE_ENV === 'development' ? (
+            <p className="text-sm text-stone-600">{t('openDataSoonDev')}</p>
+          ) : (
+            <span className="mono inline-flex rounded-full bg-stone-100 px-4 py-2 text-[11px] font-bold tracking-widest text-stone-600 uppercase">
+              {t('openDataComingSoon')}
+            </span>
           )}
         </section>
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import type { StatItem } from '@/types/portfolio';
@@ -10,30 +10,7 @@ const TARGETS = { projects: 150, years: 20, analytics: 6, specs: 3 } as const;
 export default function Hero() {
   const t = useTranslations('hero');
   const stats = t.raw('stats') as StatItem[];
-  const [counts, setCounts] = useState({
-    projects: 0,
-    years: 0,
-    analytics: 0,
-    specs: 0,
-  });
-
-  useEffect(() => {
-    const duration = 1800;
-    const start = Date.now();
-    const interval = setInterval(() => {
-      const elapsed = Date.now() - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
-      setCounts({
-        projects: Math.floor(TARGETS.projects * ease),
-        years: Math.floor(TARGETS.years * ease),
-        analytics: Math.floor(TARGETS.analytics * ease),
-        specs: Math.floor(TARGETS.specs * ease),
-      });
-      if (progress >= 1) clearInterval(interval);
-    }, 16);
-    return () => clearInterval(interval);
-  }, []);
+  const [counts] = useState({ ...TARGETS });
 
   return (
     <section className="relative overflow-hidden border-b border-stone-200 bg-white">

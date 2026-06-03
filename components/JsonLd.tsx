@@ -1,8 +1,9 @@
 import { LINKEDIN_URL } from '@/lib/constants';
+import { getSiteUrl } from '@/lib/site-url';
 
 export default function JsonLd({ locale }: { locale: string }) {
   const isEs = locale === 'es';
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://jfgarcia-portfolio.vercel.app';
+  const baseUrl = getSiteUrl();
 
   const person = {
     '@context': 'https://schema.org',

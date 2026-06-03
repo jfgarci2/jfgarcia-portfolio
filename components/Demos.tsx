@@ -5,8 +5,11 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { GITHUB_URL, OPEN_DATA_DEMO_URL, RAG_DEMO_URL } from '@/lib/constants';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 export default function Demos() {
   const t = useTranslations('demos');
+  const hasOpenDataUrl = Boolean(OPEN_DATA_DEMO_URL);
 
   return (
     <section id="demos" className="border-y border-stone-200 bg-stone-50">
@@ -32,7 +35,7 @@ export default function Demos() {
             </div>
             <h3 className="mb-2 text-xl font-semibold text-[#0A0A0A]">{t('openDataTitle')}</h3>
             <p className="mb-6 text-sm leading-relaxed text-stone-600">{t('openDataDesc')}</p>
-            {OPEN_DATA_DEMO_URL ? (
+            {hasOpenDataUrl ? (
               <a
                 href={OPEN_DATA_DEMO_URL}
                 target="_blank"
@@ -40,9 +43,12 @@ export default function Demos() {
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-[#3B5BDB]"
               >
                 {t('openDataCta')}
-                <ArrowUpRight size={16} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight
+                  size={16}
+                  className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
               </a>
-            ) : (
+            ) : isDev ? (
               <>
                 <Link
                   href="/demos/open-data"
@@ -51,8 +57,12 @@ export default function Demos() {
                   {t('openDataCta')}
                   <ArrowUpRight size={16} />
                 </Link>
-                <p className="text-xs text-stone-500">{t('openDataSoon')}</p>
+                <p className="text-xs text-stone-500">{t('openDataSoonDev')}</p>
               </>
+            ) : (
+              <span className="mono inline-flex rounded-full bg-stone-100 px-3 py-1.5 text-[11px] font-bold tracking-widest text-stone-600 uppercase">
+                {t('openDataComingSoon')}
+              </span>
             )}
           </div>
 

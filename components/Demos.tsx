@@ -5,8 +5,6 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { GITHUB_URL, OPEN_DATA_DEMO_URL, RAG_DEMO_URL } from '@/lib/constants';
 
-const isDev = process.env.NODE_ENV === 'development';
-
 export default function Demos() {
   const t = useTranslations('demos');
   const hasOpenDataUrl = Boolean(OPEN_DATA_DEMO_URL);
@@ -48,21 +46,26 @@ export default function Demos() {
                   className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
               </a>
-            ) : isDev ? (
-              <>
-                <Link
-                  href="/demos/open-data"
-                  className="group mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[#3B5BDB]"
-                >
-                  {t('openDataCta')}
-                  <ArrowUpRight size={16} />
-                </Link>
-                <p className="text-xs text-stone-500">{t('openDataSoonDev')}</p>
-              </>
             ) : (
-              <span className="mono inline-flex rounded-full bg-stone-100 px-3 py-1.5 text-[11px] font-bold tracking-widest text-stone-600 uppercase">
-                {t('openDataComingSoon')}
-              </span>
+              <>
+                {process.env.NODE_ENV === 'development' && (
+                  <>
+                    <Link
+                      href="/demos/open-data"
+                      className="group mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[#3B5BDB]"
+                    >
+                      {t('openDataCta')}
+                      <ArrowUpRight size={16} />
+                    </Link>
+                    <p className="text-xs text-stone-500">{t('openDataSoonDev')}</p>
+                  </>
+                )}
+                {process.env.NODE_ENV !== 'development' && (
+                  <span className="mono inline-flex rounded-full bg-stone-100 px-3 py-1.5 text-[11px] font-bold tracking-widest text-stone-600 uppercase">
+                    {t('openDataComingSoon')}
+                  </span>
+                )}
+              </>
             )}
           </div>
 

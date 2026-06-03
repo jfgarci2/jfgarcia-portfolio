@@ -87,12 +87,17 @@ export default async function OpenDataDemoPage({ params }: PageProps) {
                 <ArrowUpRight size={16} />
               </a>
             </>
-          ) : process.env.NODE_ENV === 'development' ? (
-            <p className="text-sm text-stone-600">{t('openDataSoonDev')}</p>
           ) : (
-            <span className="mono inline-flex rounded-full bg-stone-100 px-4 py-2 text-[11px] font-bold tracking-widest text-stone-600 uppercase">
-              {t('openDataComingSoon')}
-            </span>
+            <>
+              {process.env.NODE_ENV === 'development' && (
+                <p className="text-sm text-stone-600">{t('openDataSoonDev')}</p>
+              )}
+              {process.env.NODE_ENV !== 'development' && (
+                <span className="mono inline-flex rounded-full bg-stone-100 px-4 py-2 text-[11px] font-bold tracking-widest text-stone-600 uppercase">
+                  {t('openDataComingSoon')}
+                </span>
+              )}
+            </>
           )}
         </section>
 

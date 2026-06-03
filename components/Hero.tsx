@@ -10,7 +10,12 @@ const TARGETS = { projects: 150, years: 20, analytics: 6, specs: 3 } as const;
 export default function Hero() {
   const t = useTranslations('hero');
   const stats = t.raw('stats') as StatItem[];
-  const [counts] = useState({ ...TARGETS });
+  const [counts] = useState({
+    projects: 150,
+    years: 20,
+    analytics: 6,
+    specs: 3,
+  });
 
   return (
     <section className="relative overflow-hidden border-b border-stone-200 bg-white">

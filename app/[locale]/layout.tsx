@@ -6,7 +6,9 @@ import { notFound } from 'next/navigation';
 import { routing, type Locale } from '@/i18n/routing';
 import '../globals.css';
 import JsonLd from '@/components/JsonLd';
-import { getSiteUrl } from '@/lib/site-url';
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://jfgarcia-portfolio.vercel.app';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -31,12 +33,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
-  const baseUrl = getSiteUrl();
+  const baseUrl = siteUrl.replace(/\/$/, '');
 
   return {
     title: t('title'),
     description: t('description'),
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL ?? 'https://jfgarcia-portfolio.vercel.app',
+    ),
     keywords: t('keywords').split(',').map((k) => k.trim()),
     openGraph: {
       title: t('title'),

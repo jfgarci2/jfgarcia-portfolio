@@ -1,4 +1,5 @@
 import type { ProjectSlug } from '@/config/projects';
+import { AMVA_DASHBOARD_URL } from '@/lib/constants';
 
 export type DashboardKind = 'powerbi' | 'web' | 'rag';
 
@@ -16,32 +17,39 @@ export interface DashboardEntry {
 export const PROJECT_DASHBOARDS: Partial<Record<ProjectSlug, DashboardEntry[]>> = {
   amva: [
     {
+      id: 'permisosLive',
+      titleKey: 'permisosLive',
+      url: AMVA_DASHBOARD_URL,
+      kind: 'web',
+      embeddable: true,
+    },
+    {
       id: 'permisos',
       titleKey: 'permisos',
-      url: 'https://app.powerbi.com/view?r=eyJrIjoiYTQyMDY1YzQtMTY4My00ZGUxLWI2NGQtODU4MWM1NGU0NDdjIiwidCI6IjRkZWI0ZjAwLTNhOTgtNDcwMi04Nzk2LTIxNmRiMDljMzA3YyIsImMiOjR9',
+      url: AMVA_DASHBOARD_URL,
       kind: 'powerbi',
-      embeddable: true,
+      embeddable: false,
     },
     {
       id: 'planAccion',
       titleKey: 'planAccion',
       url: 'https://app.powerbi.com/view?r=eyJrIjoiMDhkMjMyNWEtNTU3MC00NWI5LWJhMWItMDkxZTMzYzc3YzVkIiwidCI6IjRkZWI0ZjAwLTNhOTgtNDcwMi04Nzk2LTIxNmRiMDljMzA3YyIsImMiOjR9&pageName=b5784243dbec6969d0e9',
       kind: 'powerbi',
-      embeddable: true,
+      embeddable: false,
     },
     {
       id: 'sancionatorios',
       titleKey: 'sancionatorios',
       url: 'https://app.powerbi.com/view?r=eyJrIjoiYjM5YWI3YjktOTg0Yi00M2UzLWE1NTItYWRjOTc4ZGE1NzdkIiwidCI6IjRkZWI0ZjAwLTNhOTgtNDcwMi04Nzk2LTIxNmRiMDljMzA3YyIsImMiOjR9&pageName=d81983a75d876c735296',
       kind: 'powerbi',
-      embeddable: true,
+      embeddable: false,
     },
     {
       id: 'arboles',
       titleKey: 'arboles',
       url: 'https://app.powerbi.com/view?r=eyJrIjoiMThlZjhkNjUtNDc4Zi00MzBkLTllYzgtMWE0ZTRmNDdhMTc5IiwidCI6IjRkZWI0ZjAwLTNhOTgtNDcwMi04Nzk2LTIxNmRiMDljMzA3YyIsImMiOjR9',
       kind: 'powerbi',
-      embeddable: true,
+      embeddable: false,
     },
   ],
   'medellin-dap': [
@@ -55,9 +63,9 @@ export const PROJECT_DASHBOARDS: Partial<Record<ProjectSlug, DashboardEntry[]>> 
     {
       id: 'juridico',
       titleKey: 'juridico',
-      url: 'https://app.powerbi.com/view?r=eyJrIjoiOTk4YWNkN2YtNjQxZC00NTYxLTlhZjEtZTkwYzJmYmE3NmY5IiwidCI6IjE2YjI4NTU1LWE4Y2QtNGRkNS05MTIyLThkZTFhMWM0MTk0ZCJ9',
+      url: 'https://jfgarci2.github.io/medellin-cadastral-analytics/',
       kind: 'powerbi',
-      embeddable: true,
+      embeddable: false,
     },
     {
       id: 'anywhere',

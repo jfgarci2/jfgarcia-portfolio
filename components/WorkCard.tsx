@@ -28,7 +28,7 @@ export default function WorkCard({
           slug={slug}
           mockType={item.mockType}
           fit="contain"
-          priority={slug === 'amva' || slug === 'medellin-dap'}
+          priority={slug === 'vertex-rd' || slug === 'medellin-cadastral' || slug === 'amva' || slug === 'medellin-dap'}
         />
         <div className="absolute top-3 left-3 flex items-center gap-2">
           {item.active && (
@@ -120,6 +120,44 @@ export default function WorkCard({
             </span>
           )}
         </div>
+
+        {(item.demoUrl || item.codeUrl) && (
+          <div className="mt-4 flex flex-wrap gap-3 border-t border-stone-100 pt-4">
+            {item.demoUrl && (
+              <a
+                href={item.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="mono text-[10px] font-bold tracking-widest text-[#3B5BDB] uppercase hover:underline"
+              >
+                {t('viewDemo')} ↗
+              </a>
+            )}
+            {item.codeUrl && (
+              <a
+                href={item.codeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="mono text-[10px] font-bold tracking-widest text-stone-600 uppercase hover:text-[#0A0A0A]"
+              >
+                {t('viewCode')} ↗
+              </a>
+            )}
+            {item.reportUrl && (
+              <a
+                href={item.reportUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="mono text-[10px] font-bold tracking-widest text-stone-600 uppercase hover:text-[#0A0A0A]"
+              >
+                {t('viewReport')} ↗
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </>
   );

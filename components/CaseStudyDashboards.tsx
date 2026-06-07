@@ -16,10 +16,12 @@ export default function CaseStudyDashboards({
   dashboards: DashboardEntry[];
 }) {
   const gallery = getDashboardGallery(projectSlug);
-  const galleryIds = new Set(gallery.map((g) => g.dashboardId));
   const defaultId =
+    gallery.find((g) => dashboards.some((d) => d.id === g.dashboardId && d.embeddable))
+      ?.dashboardId ??
     gallery.find((g) => dashboards.some((d) => d.id === g.dashboardId))?.dashboardId ??
     dashboards.find((d) => d.embeddable)?.id ??
+    dashboards[0]?.id ??
     null;
 
   const [previewId, setPreviewId] = useState<string | null>(defaultId);
@@ -31,10 +33,7 @@ export default function CaseStudyDashboards({
     liveRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, [dashboards]);
 
-  const showcaseDashboards =
-    gallery.length > 0
-      ? dashboards.filter((d) => galleryIds.has(d.id) || d.embeddable)
-      : dashboards;
+  const showcaseDashboards = dashboards;
 
   return (
     <div className="space-y-12">

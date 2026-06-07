@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 
-const CLIENTS = ['AMVA', 'Medellín DAP', 'DEVIMED', 'Bioexplora', 'Gobernación de Antioquia'] as const;
+const CLIENTS = ['Vertex RD', 'AMVA', 'Medellín DAP', 'DEVIMED', 'Bioexplora', 'Gobernación de Antioquia'] as const;
 
 export default function ProofBar() {
   const t = useTranslations('proof');
@@ -25,7 +25,7 @@ export default function ProofBar() {
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <div className="rounded-lg border border-stone-200 bg-white px-5 py-3 text-center">
-            <div className="text-2xl font-bold text-[#3B5BDB]">12+</div>
+            <div className="text-2xl font-bold text-[#3B5BDB]">4</div>
             <div className="mono text-[10px] tracking-widest text-stone-500 uppercase">
               {t('liveDashboards')}
             </div>

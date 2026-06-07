@@ -39,6 +39,9 @@ export interface WorkItem {
   stack: string[];
   mockType: MockType;
   hasCaseStudy?: boolean;
+  demoUrl?: string;
+  codeUrl?: string;
+  reportUrl?: string;
 }
 
 export interface CaseStudyMetric {

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "José Fernando García Pérez — Senior Geospatial Data Engineer & Data Analyst",
-    "description": "Senior Geospatial Data Engineer & Data Analyst. 20+ años SIG, 6+ años analítica de datos. Power BI, Python, Mapbox, SQL. Abierto a remoto (USD/EUR). Medellín, Colombia.",
+    "title": "José Fernando García Pérez — Senior Geospatial Data Engineer & Analytics Engineer",
+    "description": "Senior Geospatial Data Engineer & Analytics Engineer. 20+ años SIG, 6+ años analítica. Power BI, dbt, DuckDB, Python, Mapbox, FastAPI. Abierto a remoto (USD/EUR). Medellín, Colombia.",
     "siteName": "José Fernando García Pérez",
-    "keywords": "Ingeniero de datos geoespacial, Data Analyst, SIG, Power BI, Python, Mapbox, SQL, Medellín, remoto"
+    "keywords": "Ingeniero de datos geoespacial, Analytics Engineer, SIG, Power BI, dbt, Python, Mapbox, FastAPI, Medellín, remoto"
   },
   "nav": {
     "capabilities": "Servicios",
@@ -18,13 +18,13 @@
   },
   "hero": {
     "status": "En busca de empleo · Remoto (USD/EUR) · Híbrido Colombia",
-    "pre": "Senior Geospatial Data Engineer & Data Analyst",
-    "skills": "SIG · Power BI · Python · Mapbox · SQL",
+    "pre": "Senior Geospatial Data Engineer & Analytics Engineer",
+    "skills": "SIG · Power BI · dbt · Python · Mapbox · SQL",
     "line1": "Construyo sistemas de datos",
     "line2": "para gobiernos,",
     "line3": "infraestructura",
     "line4": "y gestión de riesgo.",
-    "sub": "Ingeniero civil con 20+ años en inteligencia geoespacial y 6+ años como data analyst. Diseño pipelines que aguantan auditorías regulatorias y entrego tableros que sobreviven juntas directivas.",
+    "sub": "Ingeniero civil con 20+ años en inteligencia geoespacial y 6+ años como analytics engineer. Diseño pipelines medallion testeados en dbt/DuckDB, geoportales Mapbox y tableros que sobreviven auditorías regulatorias.",
     "ctaPrimary": "Ver proyectos",
     "ctaSecondary": "Contáctame",
     "stats": [
@@ -49,9 +49,9 @@
       {
         "icon": "chart",
         "tag": "Analytics Engineering",
-        "title": "Tableros ejecutivos y modelos semánticos",
-        "desc": "Tableros Power BI con DAX complejo, modelos estrella y puente, transformaciones Power Query M. Del tipo que sobrevive escrutinio directivo y ciclos de auditoría.",
-        "deliverables": ["Power BI senior", "Modelado DAX", "Marcos de KPIs", "BI self-service"]
+        "title": "Pipelines medallion, dbt y tableros ejecutivos",
+        "desc": "Reingeniería de procesos heredados Power BI/DAX a pipelines Python → DuckDB → dbt con tests, anonimización PII y tableros Chart.js o Power BI con modelos estrella y puente.",
+        "deliverables": ["dbt + DuckDB", "Arquitectura medallion", "Power BI senior", "Tableros web Mapbox"]
       },
       {
         "icon": "map",
@@ -91,12 +91,15 @@
     "sub": "Colaboraciones activas con agencias de gobierno y operadores de infraestructura.",
     "activeBadge": "ACTIVO",
     "impactLabel": "Impacto",
-    "transparencyTitle": "Trabajo de transparencia pública",
-    "transparencyDesc": "Los tableros de AMVA y DAP-Medellín están enlazados desde sus casos de estudio con vista previa embebida. Se publican reportes adicionales conforme pasan revisión de datos.",
-    "comingTitle": "Próximamente",
-    "comingDesc": "Demos con datos abiertos colombianos · Repositorios GitHub · Casos de estudio detallados · Mapas interactivos embebidos.",
+    "transparencyTitle": "Demos en vivo y casos de estudio",
+    "transparencyDesc": "Geoportales, pipelines dbt y tableros anonimizados enlazados desde sus casos de estudio. Tableros Power BI con PII se muestran como capturas; la versión pública usa datos anonimizados.",
+    "comingTitle": "En formación activa",
+    "comingDesc": "Azure · Databricks · Microsoft Fabric · n8n — ampliando el stack cloud sobre la base SIG + analytics engineering ya en producción.",
     "viewCaseStudy": "Ver caso de estudio",
     "viewDashboard": "Ver tablero en vivo",
+    "viewDemo": "Ver demo en vivo",
+    "viewCode": "Ver código",
+    "viewReport": "Informe PDF",
     "liveDashboards": "tableros en vivo",
     "gisFocusBadge": "SIG · geodatabases · SQL · Python",
     "dashboardsPending": "Los enlaces en vivo se publican tras revisión y anonimización de datos.",
@@ -109,38 +112,94 @@
     "items": [
       {
         "id": "01",
-        "slug": "amva",
-        "client": "AMVA",
-        "clientFull": "Área Metropolitana del Valle de Aburrá",
-        "role": "Analista Senior SIG y Data Analyst",
-        "period": "2024 — Actualidad",
-        "active": true,
-        "impact": "4 tableros Power BI en producción para permisos ambientales, sanciones, plan de acción y árboles en riesgo",
-        "desc": "Cuatro tableros Power BI senior con DAX para días hábiles y KPIs auditables. Pipelines Python/ArcPy alimentan modelos desde geodatabases en MAGNA-SIRGAS CTM12.",
-        "deliverables": ["Control de permisos", "Flujos sancionatorios", "Plan de acción", "Árboles en riesgo"],
+        "slug": "vertex-rd",
+        "client": "Vertex RD",
+        "clientFull": "Pérez Domínguez · Rep. Dominicana",
+        "role": "Ingeniero de Datos Geoespacial",
+        "period": "Feb 2025 — Feb 2026",
+        "active": false,
+        "impact": "Geoportal catastral full-stack: 140.237 predios, 22 capas → 10 tilesets Mapbox, API FastAPI + PostGIS en Render",
+        "desc": "Primera contratación internacional remota (USD). Ficha Predial 360°, tipologías de densidad, retiros y analítica por barrio. Backend contenerizado con Docker.",
+        "deliverables": ["Geoportal Mapbox GL JS", "API búsqueda predial 140K", "FastAPI + PostGIS", "Docker + Render"],
         "tags": ["engineering", "analytics", "gis"],
-        "stack": ["Power BI", "DAX", "ArcPy", "React", "Supabase"],
-        "mockType": "dashboard",
-        "hasCaseStudy": true
+        "stack": ["FastAPI", "PostGIS", "Mapbox", "Docker", "Chart.js", "Turf.js"],
+        "mockType": "map",
+        "hasCaseStudy": true,
+        "demoUrl": "https://vertex-rd-geoportal.onrender.com",
+        "codeUrl": "https://github.com/jfgarci2/vertex-rd-geoportal"
       },
       {
         "id": "02",
+        "slug": "medellin-cadastral",
+        "client": "Medellín Cadastral Analytics",
+        "clientFull": "Municipio de Medellín",
+        "role": "Analytics Engineer · SIG",
+        "period": "2025 — Actualidad",
+        "active": true,
+        "impact": "Pipeline sobre 15.3M+ registros catastrales históricos (2015–2024): Python/GeoPandas → DuckDB → marts dbt con tests",
+        "desc": "Agregados a nivel barrio/comuna, reproyección MAGNA-SIRGAS→WGS84 y choropleths Mapbox unidos por llaves CBML. Demo pública en GitHub Pages.",
+        "deliverables": ["Arquitectura medallion", "Marts dbt testeados", "Choropleths Mapbox", "Demo GitHub Pages"],
+        "tags": ["engineering", "analytics", "gis"],
+        "stack": ["Python", "GeoPandas", "DuckDB", "dbt", "Mapbox"],
+        "mockType": "map",
+        "hasCaseStudy": true,
+        "demoUrl": "https://jfgarci2.github.io/medellin-cadastral-analytics/",
+        "codeUrl": "https://github.com/jfgarci2/medellin-cadastral-analytics"
+      },
+      {
+        "id": "03",
+        "slug": "amva",
+        "client": "AMVA",
+        "clientFull": "Área Metropolitana del Valle de Aburrá",
+        "role": "Especialista SIG y Analytics Engineer",
+        "period": "2024 — Actualidad",
+        "active": true,
+        "impact": "Reingeniería Power BI/DAX → Python → DuckDB → dbt: 206.680 registros, 3.865 trámites, 13 tests dbt, anonimización PII",
+        "desc": "Tablero Chart.js + Mapbox autoactualizable (1.068 trámites georreferenciados). Los tableros Power BI originales se muestran como capturas; la demo pública usa datos anonimizados.",
+        "deliverables": ["Pipeline medallion dbt", "Tablero web anonimizado", "5 áreas SGC", "Días hábiles 7:30–17:30"],
+        "tags": ["engineering", "analytics", "gis"],
+        "stack": ["dbt", "DuckDB", "Python", "Mapbox", "Chart.js", "Power BI"],
+        "mockType": "dashboard",
+        "hasCaseStudy": true,
+        "demoUrl": "https://dashboard-lake-eight-41.vercel.app",
+        "codeUrl": "https://github.com/jfgarci2/amva-environmental-permits",
+        "reportUrl": "https://github.com/jfgarci2/amva-environmental-permits/blob/main/docs/INFORME_PORTFOLIO_RECLUTADOR.pdf"
+      },
+      {
+        "id": "04",
         "slug": "medellin-dap",
         "client": "Municipio de Medellín",
         "clientFull": "Departamento Administrativo de Planeación (DAP)",
         "role": "Data Analyst y Especialista SIG",
         "period": "2024 — Actualidad",
         "active": true,
-        "impact": "7 tableros Power BI + 1 asistente de IA basado en RAG sobre el documento POT de 322 páginas",
-        "desc": "Construí tableros para seguimiento jurídico, KPIs de acceso anywhere, oficios UPT-POT, temas estratégicos de revisión, proceso participativo, monitoreo de mesas POT 2025, y un portafolio web para la subdirección. Modelos estrella y puente en Power Query / M. Automatización ArcPy para planeación urbana multicriterio.",
-        "deliverables": ["Tablero jurídico", "Acceso anywhere KPIs", "Mesas POT 2025", "Temas estratégicos", "Proceso participativo", "Portafolio web subdirección"],
+        "impact": "7 tableros Power BI + asistente RAG sobre el POT de 322 páginas + analítica catastral",
+        "desc": "Tableros para seguimiento jurídico, KPIs anywhere, oficios UPT-POT, temas estratégicos, proceso participativo y mesas POT 2025. El tablero jurídico se publica como capturas por PII; la analítica catastral tiene demo anonimizada en vivo.",
+        "deliverables": ["Tablero jurídico (capturas)", "Acceso anywhere KPIs", "Mesas POT 2025", "RAG POT", "Cadastral analytics"],
         "tags": ["analytics", "gis", "engineering"],
-        "stack": ["Power BI", "Power Query", "ModelBuilder", "Web design"],
+        "stack": ["Power BI", "Power Query", "ArcPy", "Mapbox", "LangChain"],
         "mockType": "kpi",
         "hasCaseStudy": true
       },
       {
-        "id": "03",
+        "id": "05",
+        "slug": "rag-pot-medellin",
+        "client": "Asistente RAG — POT",
+        "clientFull": "Municipio de Medellín · DAP",
+        "role": "Ingeniero de IA / Datos",
+        "period": "2025 — Actualidad",
+        "active": true,
+        "impact": "Asistente RAG en producción: consulta el POT de 322 páginas en lenguaje natural con fuentes citadas",
+        "desc": "ChromaDB + Cohere + Groq + LangChain sobre FastAPI, con autenticación por códigos de acceso y límites de uso diarios.",
+        "deliverables": ["RAG en español", "Citas obligatorias", "FastAPI + Render", "Autenticación"],
+        "tags": ["engineering", "analytics"],
+        "stack": ["LangChain", "ChromaDB", "FastAPI", "Groq", "Render"],
+        "mockType": "kpi",
+        "hasCaseStudy": true,
+        "demoUrl": "https://rag-pot-medellin.onrender.com/"
+      },
+      {
+        "id": "06",
         "slug": "devimed",
         "client": "DEVIMED",
         "clientFull": "DEVIMED S.A. — Concesionaria vial",
@@ -155,7 +214,7 @@
         "mockType": "geodata"
       },
       {
-        "id": "04",
+        "id": "07",
         "slug": "bioexplora",
         "client": "Bioexplora",
         "clientFull": "Bioexplora S.A.S.",
@@ -163,14 +222,14 @@
         "period": "2012 — 2024",
         "active": false,
         "impact": "80+ proyectos SIG: geodatabases, PostGIS/SQL, cartografía y scripts Python para riesgo y planeación territorial",
-        "desc": "Trabajo de campo y oficina técnica: estructuración de geodatabases, consultas espaciales, geoestadística y pipelines ArcPy — sin tableros Power BI en este cliente.",
+        "desc": "Trabajo de campo y oficina técnica: estructuración de geodatabases, consultas espaciales, geoestadística y pipelines ArcPy.",
         "deliverables": ["Geodatabases de proyecto", "PostGIS / SQL", "Cartografía SIG", "Scripts Python / ArcPy"],
         "tags": ["gis", "engineering"],
         "stack": ["ArcGIS", "PostGIS", "SQL", "Python", "Geoestadística"],
         "mockType": "geodata"
       },
       {
-        "id": "05",
+        "id": "08",
         "slug": "iatech",
         "client": "IATECH",
         "clientFull": "IATECH | Mun. Medellín",
@@ -183,7 +242,7 @@
         "mockType": "kpi"
       },
       {
-        "id": "06",
+        "id": "09",
         "slug": "antioquia",
         "client": "Gobernación de Antioquia",
         "clientFull": "Gobernación de Antioquia",
@@ -201,14 +260,15 @@
   },
   "dashboards": {
     "amva": {
-      "permisos": "Control de permisos ambientales",
-      "planAccion": "Presentación ambiental y plan de acción",
-      "sancionatorios": "Flujos sancionatorios",
-      "arboles": "Árboles en riesgo"
+      "permisosLive": "Tablero anonimizado en vivo (Chart.js + Mapbox)",
+      "permisos": "Control de permisos ambientales (Power BI — capturas)",
+      "planAccion": "Presentación ambiental y plan de acción (capturas)",
+      "sancionatorios": "Flujos sancionatorios (capturas)",
+      "arboles": "Árboles en riesgo (capturas)"
     },
     "medellin-dap": {
       "presentacionAmva": "Presentación ambiental (AMVA)",
-      "juridico": "Tablero jurídico",
+      "juridico": "Tablero jurídico (capturas — datos no anonimizados)",
       "anywhere": "Tablero Anywhere",
       "oficiosUptPot": "Oficios UPT-POT",
       "temasEstrategicos": "Temas estratégicos de la revisión",
@@ -227,12 +287,18 @@
     "deliverables": "Entregables",
     "metrics": "Métricas clave",
     "galleryTitle": "Vista previa de tableros",
-    "gallerySub": "Capturas de tableros Power BI en producción. Haz clic en una tarjeta para cargar el informe en vivo abajo.",
-    "gallerySelect": "Clic para ver en vivo",
-    "gallerySelected": "En vivo abajo",
+    "gallerySub": "Capturas de tableros en producción. Los informes con PII se muestran solo como imágenes; los anonimizados se pueden ver en vivo abajo.",
+    "gallerySelect": "Clic para previsualizar",
+    "gallerySelected": "Seleccionado abajo",
     "viewLive": "Ver en vivo",
+    "galleryOnlyNote": "Vista previa por captura — datos institucionales no anonimizados. La demo pública enlazada usa datos anonimizados.",
+    "galleryPreviewLabel": "Captura del tablero",
     "galleryExtrasTitle": "Más vistas",
-    "galleryExtrasSub": "Páginas adicionales del informe y portafolio web de la subdirección en Netlify.",
+    "galleryExtrasSub": "Páginas adicionales de informes Power BI y portafolios web.",
+    "extraPermisosVista2": "Permisos ambientales — vista detalle",
+    "extraPermisosVista3": "Permisos ambientales — vista mapa",
+    "extraJuridicoVista2": "Tablero jurídico — seguimiento procesos",
+    "extraJuridicoVista3": "Tablero jurídico — indicadores",
     "extraGobernanza": "Gobernanza (web SPTEC)",
     "extraMacroRio": "Macroproyecto Río Norte",
     "extraOficiosAlertas": "Oficios UPT — alertas",
@@ -242,24 +308,53 @@
     "ragLiveCta": "Demo RAG en vivo",
     "ragCaseLink": "Caso de estudio RAG POT",
     "relatedProject": "Colaboración relacionada",
-    "amva": {
-      "title": "AMVA — Analítica de cumplimiento ambiental",
-      "summary": "Cuatro tableros Power BI en producción para permisos metropolitanos, sanciones, plan de acción y árboles en riesgo, dentro de transparencia ciudadana.",
-      "challenge": "AMVA necesitaba trazabilidad en ciclos de permisos, flujos sancionatorios y casos de riesgo arbóreo — con lógica de días hábiles, contexto espacial y KPIs auditables.",
-      "approach": "Modelos estrella y detalle en Power BI con DAX para plazos y estados. Pipelines Python/ArcPy mantienen geodatabases y capas MAGNA-SIRGAS CTM12 alimentando modelos semánticos.",
-      "outcome": "Equipos directivos y técnicos comparten una fuente única de verdad — menos reportes manuales y mejor tiempo de respuesta en casos prioritarios.",
+    "demoLiveCta": "Demo en vivo",
+    "codeCta": "Ver código en GitHub",
+    "reportCta": "Informe para reclutador (PDF)",
+    "cadastralDemoCta": "Analítica catastral anonimizada",
+    "cadastralCaseLink": "Caso de estudio catastral",
+    "vertex-rd": {
+      "title": "Vertex RD — Geoportal catastral 360°",
+      "summary": "Geoportal full-stack para el Distrito Nacional (Rep. Dominicana): 140.237 predios, 22 capas vectoriales, Ficha Predial 360° y analítica urbana en Mapbox.",
+      "challenge": "El cliente necesitaba consultar 140K predios con contexto de zonificación, densidad y retiros — sin depender de escritorios GIS ni reportes estáticos.",
+      "approach": "22 shapefiles → 10 tilesets Mapbox. Backend FastAPI + PostGIS (fallback SQLite) con API de búsqueda predial. Frontend Mapbox GL JS 3.10 + Turf.js + Chart.js. Docker en Render.",
+      "outcome": "Búsqueda y resaltado de predios en segundos, analítica por barrio integrada al mapa, y despliegue internacional remoto en USD.",
       "metrics": [
-        { "value": "4", "label": "Tableros en producción" },
-        { "value": "DAX", "label": "Lógica de días hábiles" },
-        { "value": "ArcPy", "label": "Automatización geodatabase" }
+        { "value": "140K", "label": "Predios modelados" },
+        { "value": "22", "label": "Capas vectoriales" },
+        { "value": "Render", "label": "Deploy en producción" }
+      ]
+    },
+    "medellin-cadastral": {
+      "title": "Medellín Cadastral Analytics",
+      "summary": "Pipeline de analytics engineering sobre 15.3M+ registros catastrales históricos (2015–2024) con marts dbt y choropleths Mapbox.",
+      "challenge": "Consolidar una década de registros catastrales heterogéneos en agregados confiables a nivel barrio/comuna, con reproyección espacial y llaves CBML.",
+      "approach": "Python/GeoPandas → DuckDB → capas bronze/silver/gold en dbt con tests. Reproyección MAGNA-SIRGAS→WGS84. Demo pública con Mapbox choropleths en GitHub Pages.",
+      "outcome": "Marts reproducibles, métricas territoriales auditables y demo pública lista para compartir con reclutadores.",
+      "metrics": [
+        { "value": "15.3M+", "label": "Registros históricos" },
+        { "value": "dbt", "label": "Marts testeados" },
+        { "value": "Mapbox", "label": "Choropleths en vivo" }
+      ]
+    },
+    "amva": {
+      "title": "AMVA — Pipeline de permisos ambientales",
+      "summary": "Reingeniería de Power BI/DAX a pipeline Python → DuckDB → dbt con tablero web anonimizado Chart.js + Mapbox para 3.865 trámites metropolitanos.",
+      "challenge": "AMVA necesitaba trazabilidad en ciclos de permisos con lógica de días hábiles, 5 áreas SGC y KPIs auditables — y una versión pública sin PII.",
+      "approach": "Medallion bronze/silver/gold en dbt (13 tests), anonimización Ley 1581/2012, 206.680 registros a nivel tarea. Tablero web autoactualizable con 1.068 trámites georreferenciados. Los Power BI originales se documentan como capturas.",
+      "outcome": "Demo anonimizada compartible internacionalmente, pipeline reproducible y menos dependencia de reportes manuales.",
+      "metrics": [
+        { "value": "206K", "label": "Registros procesados" },
+        { "value": "13", "label": "Tests dbt" },
+        { "value": "1", "label": "Tablero anonimizado en vivo" }
       ]
     },
     "medellin-dap": {
       "title": "DAP Medellín — Inteligencia de planeación urbana",
-      "summary": "Siete tableros Power BI y portafolio web de subdirección para revisión del POT, seguimiento jurídico y procesos participativos.",
+      "summary": "Siete tableros Power BI, portafolio web de subdirección, asistente RAG sobre el POT y analítica catastral anonimizada.",
       "challenge": "El DAP requería analítica coordinada entre seguimiento jurídico, temas estratégicos, participación y KPIs ejecutivos — integrando flujos espaciales de planeación.",
-      "approach": "Modelos Power Query M con patrones estrella/puente, tableros por frente de trabajo y ArcPy para análisis multicriterio. El asistente RAG se documenta aparte.",
-      "outcome": "Los equipos monitorean hitos del POT, compromisos jurídicos y métricas de participación desde tableros unificados.",
+      "approach": "Modelos Power Query M con patrones estrella/puente, tableros por frente de trabajo y ArcPy para análisis multicriterio. Tablero jurídico documentado como capturas por PII; analítica catastral con demo pública.",
+      "outcome": "Los equipos monitorean hitos del POT, compromisos jurídicos y métricas de participación. Reclutadores ven demos anonimizadas y capturas de tableros institucionales.",
       "metrics": [
         { "value": "8", "label": "Informes en vivo + web" },
         { "value": "686", "label": "Oficios UPT monitoreados" },
@@ -281,16 +376,25 @@
   },
   "demos": {
     "sectionLabel": "Demos públicos",
-    "title": "Demos propios y datos abiertos",
-    "sub": "Piezas de exhibición con datos abiertos colombianos y stacks open source — bajo mi control para portafolios internacionales.",
-    "openDataTitle": "Analítica con datos abiertos Colombia",
-    "openDataDesc": "Prototipo con datos.gov.co y catálogos abiertos de Medellín — indicadores ambientales y territoriales con pipelines reproducibles en Python/Power BI.",
-    "openDataCta": "Ver demo datos abiertos",
+    "title": "Demos en vivo + código",
+    "sub": "Proyectos bajo mi control con datos anonimizados o abiertos — listos para compartir con reclutadores internacionales.",
+    "vertexTitle": "Vertex RD — Geoportal catastral",
+    "vertexDesc": "140.237 predios · FastAPI + PostGIS · Mapbox GL JS · Docker en Render. Primera contratación internacional remota.",
+    "cadastralTitle": "Medellín Cadastral Analytics",
+    "cadastralDesc": "15.3M+ registros · Python/GeoPandas → DuckDB → dbt · Choropleths Mapbox en GitHub Pages.",
+    "amvaTitle": "AMVA — Permisos ambientales",
+    "amvaDesc": "Pipeline medallion dbt · 206K registros · Tablero Chart.js + Mapbox anonimizado en Vercel.",
+    "openDataTitle": "Analítica catastral Medellín",
+    "openDataDesc": "Demo pública con datos abiertos y pipeline reproducible — mismo proyecto que arriba, optimizado para reclutadores.",
+    "openDataCta": "Ver demo catastral",
     "openDataComingSoon": "Próximamente",
-    "openDataSoonDev": "Configura la URL en .env.local — NEXT_PUBLIC_OPEN_DATA_DEMO_URL cuando esté publicada.",
-    "ragTitle": "RAG sobre documentos públicos",
-    "ragDesc": "RAG en producción para el POT de Medellín (destacado arriba). Próximo: réplica open source sobre una norma pública con repo en GitHub.",
+    "openDataSoonDev": "Demo disponible en GitHub Pages.",
+    "ragTitle": "RAG sobre el POT de Medellín",
+    "ragDesc": "Asistente en producción: 322 páginas indexadas, respuestas con citas en ~5s. ChromaDB + LangChain + FastAPI.",
     "ragCta": "Demo RAG en vivo",
+    "demoCta": "Demo en vivo",
+    "codeCta": "Código",
+    "reportCta": "Informe PDF",
     "githubCta": "Perfil GitHub",
     "caseStudyLink": "Caso de estudio",
     "backToDemos": "Volver a demos"
@@ -308,12 +412,12 @@
       {
         "name": "Diario",
         "tone": "primary",
-        "items": ["Power BI", "DAX", "Power Query · M", "Python", "Pandas", "ArcPy", "PostgreSQL", "PostGIS", "ArcGIS Pro", "QGIS", "JavaScript", "React"]
+        "items": ["Power BI", "DAX", "dbt", "DuckDB", "Python", "Pandas", "ArcPy", "FastAPI", "PostgreSQL", "PostGIS", "Mapbox GL JS", "ArcGIS Pro", "QGIS", "JavaScript", "React"]
       },
       {
         "name": "En formación",
         "tone": "secondary",
-        "items": ["Azure", "Databricks", "Microsoft Fabric", "Supabase", "Cursor AI"]
+        "items": ["Azure", "Databricks", "Microsoft Fabric", "Docker", "Render", "Vercel", "LangChain", "Cursor AI", "n8n"]
       }
     ],
     "certs": [
@@ -328,9 +432,9 @@
     "sectionLabel": "Perfil",
     "title": "Perfil",
     "name": "José Fernando García Pérez",
-    "roles": ["Geospatial Data Engineer", "Data Analyst", "Especialista SIG"],
+    "roles": ["Geospatial Data Engineer", "Analytics Engineer", "Especialista SIG"],
     "p1": "Ingeniero civil (Universidad Nacional de Colombia, 2006) con tres especializaciones de postgrado. Matrícula T.P. 05202139705 ANT.",
-    "p2": "Empecé con mapas. Migraciones AutoCAD a ArcGIS, bases de datos espaciales en PostgreSQL, geodatabases para gobierno. Después los datos escalaron, llegaron los tableros, y DAX se volvió parte del día a día. Hoy construyo ambas capas — el pipeline espacial y la analítica que va encima.",
+    "p2": "Dos décadas en SIG y 6+ años en analítica de datos. Hoy combino pipelines medallion (dbt/DuckDB), geoportales Mapbox, tableros Power BI y asistentes RAG en producción para gobierno e infraestructura.",
     "p3": "Activamente trabajando en Azure, Databricks y Microsoft Fabric. Trabajo remoto, híbrido o presencial para clientes de cualquier país.",
     "location": "Medellín, Colombia · UTC−05",
     "years": "años de experiencia profesional",
@@ -350,7 +454,7 @@
   "contact": {
     "sectionLabel": "Contacto",
     "title": "Construyamos algo.",
-    "sub": "Abierto a roles senior de data analyst e ingeniería de datos geoespacial — remoto (USD/EUR), híbrido o consultoría.",
+    "sub": "Abierto a roles senior de analytics engineer, data engineer geoespacial o data analyst — remoto (USD/EUR), híbrido o consultoría.",
     "email": "jfgarci206@gmail.com",
     "whatsapp": "+57 317 660 8420",
     "linkedin": "José Fernando García Pérez",
@@ -359,15 +463,17 @@
   },
   "guide": {
     "label": "Explora el portafolio",
-    "sub": "Acceso directo a los casos de estudio con tableros en vivo y capturas.",
-    "amva": "AMVA",
+    "sub": "Acceso directo a demos en vivo, casos de estudio y capturas de tableros institucionales.",
+    "vertex": "Vertex RD",
+    "cadastral": "Cadastral Medellín",
+    "amva": "AMVA Permisos",
     "dap": "DAP Medellín",
     "rag": "RAG POT"
   },
   "proof": {
-    "label": "Equipos de sector público e infraestructura",
-    "liveDashboards": "Tableros Power BI en vivo",
-    "ragProduction": "RAG en producción (planeación urbana)",
+    "label": "Equipos de sector público, infraestructura e internacional",
+    "liveDashboards": "Demos en vivo",
+    "ragProduction": "RAG en producción",
     "activeRoles": "Roles de entrega"
   },
   "hire": {
@@ -375,10 +481,10 @@
     "title": "Empleo o consultoría — tú eliges.",
     "sub": "6+ años en analítica de datos y 20+ en SIG. Me adapto a cómo contratas: remoto/híbrido a tiempo completo o proyectos acotados.",
     "employmentTitle": "Roles a tiempo completo",
-    "employmentDesc": "Senior Data Analyst, Analytics Engineer o Geospatial Data Engineer. Remoto USD/EUR, híbrido en Colombia o reubicación según encaje.",
+    "employmentDesc": "Senior Analytics Engineer, Geospatial Data Engineer o Data Analyst. Remoto USD/EUR, híbrido en Colombia o reubicación según encaje.",
     "employmentCta": "Agendar conversación",
     "freelanceTitle": "Consultoría y contratos",
-    "freelanceDesc": "Modelos semánticos Power BI, tableros ejecutivos, pipelines SIG y prototipos RAG para planeación y riesgo.",
+    "freelanceDesc": "Pipelines dbt/DuckDB, geoportales Mapbox, modelos Power BI, pipelines SIG y prototipos RAG para planeación y riesgo.",
     "freelanceCta": "Escribir para propuesta",
     "downloadCv": "Descargar CV (PDF)",
     "linkedin": "Conectar en LinkedIn"

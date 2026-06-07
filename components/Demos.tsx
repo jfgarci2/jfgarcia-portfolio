@@ -1,13 +1,72 @@
 'use client';
 
-import { ArrowUpRight, Database } from 'lucide-react';
+import { ArrowUpRight, Database, Globe, Leaf, Map } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { GITHUB_URL, OPEN_DATA_DEMO_URL, RAG_DEMO_URL } from '@/lib/constants';
+import {
+  AMVA_DASHBOARD_URL,
+  AMVA_GITHUB_URL,
+  AMVA_REPORT_PDF_URL,
+  GITHUB_URL,
+  MEDELLIN_CADASTRAL_DEMO_URL,
+  MEDELLIN_CADASTRAL_GITHUB_URL,
+  RAG_DEMO_URL,
+  VERTEX_RD_DEMO_URL,
+  VERTEX_RD_GITHUB_URL,
+} from '@/lib/constants';
+
+type DemoCard = {
+  icon: typeof Globe;
+  titleKey: string;
+  descKey: string;
+  demoUrl: string;
+  codeUrl?: string;
+  reportUrl?: string;
+  caseStudyHref?: string;
+  accent?: string;
+};
+
+const DEMO_CARDS: DemoCard[] = [
+  {
+    icon: Globe,
+    titleKey: 'vertexTitle',
+    descKey: 'vertexDesc',
+    demoUrl: VERTEX_RD_DEMO_URL,
+    codeUrl: VERTEX_RD_GITHUB_URL,
+    caseStudyHref: '/work/vertex-rd',
+    accent: 'text-[#3B5BDB]',
+  },
+  {
+    icon: Map,
+    titleKey: 'cadastralTitle',
+    descKey: 'cadastralDesc',
+    demoUrl: MEDELLIN_CADASTRAL_DEMO_URL,
+    codeUrl: MEDELLIN_CADASTRAL_GITHUB_URL,
+    caseStudyHref: '/work/medellin-cadastral',
+    accent: 'text-emerald-600',
+  },
+  {
+    icon: Leaf,
+    titleKey: 'amvaTitle',
+    descKey: 'amvaDesc',
+    demoUrl: AMVA_DASHBOARD_URL,
+    codeUrl: AMVA_GITHUB_URL,
+    reportUrl: AMVA_REPORT_PDF_URL,
+    caseStudyHref: '/work/amva',
+    accent: 'text-teal-600',
+  },
+  {
+    icon: Database,
+    titleKey: 'ragTitle',
+    descKey: 'ragDesc',
+    demoUrl: RAG_DEMO_URL,
+    caseStudyHref: '/work/rag-pot-medellin',
+    accent: 'text-violet-600',
+  },
+];
 
 export default function Demos() {
   const t = useTranslations('demos');
-  const hasOpenDataUrl = Boolean(OPEN_DATA_DEMO_URL);
 
   return (
     <section id="demos" className="border-y border-stone-200 bg-stone-50">
@@ -27,80 +86,71 @@ export default function Demos() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
-          <div className="rounded-xl border border-stone-200 bg-white p-7">
-            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[#3B5BDB]/10 text-[#3B5BDB]">
-              <Database size={20} />
-            </div>
-            <h3 className="mb-2 text-xl font-semibold text-[#0A0A0A]">{t('openDataTitle')}</h3>
-            <p className="mb-6 text-sm leading-relaxed text-stone-600">{t('openDataDesc')}</p>
-            {hasOpenDataUrl ? (
-              <a
-                href={OPEN_DATA_DEMO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-[#3B5BDB]"
-              >
-                {t('openDataCta')}
-                <ArrowUpRight
-                  size={16}
-                  className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </a>
-            ) : (
-              <>
-                {process.env.NODE_ENV === 'development' && (
-                  <>
-                    <Link
-                      href="/demos/open-data"
-                      className="group mb-3 inline-flex items-center gap-2 text-sm font-semibold text-[#3B5BDB]"
+          {DEMO_CARDS.map((card) => {
+            const Icon = card.icon;
+            return (
+              <div key={card.titleKey} className="rounded-xl border border-stone-200 bg-white p-7">
+                <div
+                  className={`mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-stone-100 ${card.accent ?? 'text-[#3B5BDB]'}`}
+                >
+                  <Icon size={20} />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-[#0A0A0A]">{t(card.titleKey)}</h3>
+                <p className="mb-6 text-sm leading-relaxed text-stone-600">{t(card.descKey)}</p>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href={card.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-sm font-semibold text-[#3B5BDB]"
+                  >
+                    {t('demoCta')}
+                    <ArrowUpRight size={16} />
+                  </a>
+                  {card.codeUrl && (
+                    <a
+                      href={card.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-medium text-stone-600 underline-offset-2 hover:text-[#0A0A0A] hover:underline"
                     >
-                      {t('openDataCta')}
-                      <ArrowUpRight size={16} />
+                      {t('codeCta')}
+                    </a>
+                  )}
+                  {card.reportUrl && (
+                    <a
+                      href={card.reportUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-medium text-stone-600 underline-offset-2 hover:text-[#0A0A0A] hover:underline"
+                    >
+                      {t('reportCta')}
+                    </a>
+                  )}
+                  {card.caseStudyHref && (
+                    <Link
+                      href={card.caseStudyHref}
+                      className="text-sm font-medium text-stone-600 underline-offset-2 hover:text-[#0A0A0A] hover:underline"
+                    >
+                      {t('caseStudyLink')}
                     </Link>
-                    <p className="text-xs text-stone-500">{t('openDataSoonDev')}</p>
-                  </>
-                )}
-                {process.env.NODE_ENV !== 'development' && (
-                  <span className="mono inline-flex rounded-full bg-stone-100 px-3 py-1.5 text-[11px] font-bold tracking-widest text-stone-600 uppercase">
-                    {t('openDataComingSoon')}
-                  </span>
-                )}
-              </>
-            )}
-          </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
-          <div className="rounded-xl border border-stone-200 bg-white p-7">
-            <div className="mono mb-2 text-[10px] font-bold tracking-widest text-emerald-600 uppercase">
-              RAG · LLM
-            </div>
-            <h3 className="mb-2 text-xl font-semibold text-[#0A0A0A]">{t('ragTitle')}</h3>
-            <p className="mb-6 text-sm leading-relaxed text-stone-600">{t('ragDesc')}</p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href={RAG_DEMO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-[#3B5BDB]"
-              >
-                {t('ragCta')}
-                <ArrowUpRight size={16} />
-              </a>
-              <Link
-                href="/work/rag-pot-medellin"
-                className="text-sm font-medium text-stone-600 underline-offset-2 hover:text-[#0A0A0A] hover:underline"
-              >
-                {t('caseStudyLink')}
-              </Link>
-              <a
-                href={GITHUB_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-stone-600 underline-offset-2 hover:text-[#0A0A0A] hover:underline"
-              >
-                {t('githubCta')}
-              </a>
-            </div>
-          </div>
+        <div className="mt-8 text-center">
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mono inline-flex items-center gap-2 text-[11px] font-bold tracking-widest text-stone-500 uppercase hover:text-[#3B5BDB]"
+          >
+            {t('githubCta')}
+            <ArrowUpRight size={14} />
+          </a>
         </div>
       </div>
     </section>

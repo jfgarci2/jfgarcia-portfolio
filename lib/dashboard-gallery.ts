@@ -9,8 +9,8 @@ export type DashboardGalleryItem = {
 const GALLERY_BY_PROJECT: Partial<Record<ProjectSlug, DashboardGalleryItem[]>> = {
   amva: [
     {
-      dashboardId: 'sancionatorios',
-      src: '/work/dashboards/amva/sancionatorios.webp',
+      dashboardId: 'permisosLive',
+      src: '/work/dashboards/amva/permisos-live.webp',
     },
     {
       dashboardId: 'permisos',
@@ -23,6 +23,10 @@ const GALLERY_BY_PROJECT: Partial<Record<ProjectSlug, DashboardGalleryItem[]>> =
     {
       dashboardId: 'planAccion',
       src: '/work/dashboards/amva/plan-accion.webp',
+    },
+    {
+      dashboardId: 'sancionatorios',
+      src: '/work/dashboards/amva/sancionatorios.webp',
     },
   ],
   'medellin-dap': [
@@ -61,11 +65,33 @@ const GALLERY_BY_PROJECT: Partial<Record<ProjectSlug, DashboardGalleryItem[]>> =
   ],
 };
 
-/** Additional captures (Netlify sub-sites, extra report pages) — Medellín DAP only */
+/** Additional captures (extra report pages) — gallery-only dashboards */
 export const DASHBOARD_GALLERY_EXTRAS: Partial<
-  Record<ProjectSlug, { src: string; labelKey: string }[]>
+  Record<ProjectSlug, { src: string; labelKey: string; dashboardId?: string }[]>
 > = {
+  amva: [
+    {
+      labelKey: 'extraPermisosVista2',
+      dashboardId: 'permisos',
+      src: '/work/dashboards/amva/extras/permisos-vista-2.webp',
+    },
+    {
+      labelKey: 'extraPermisosVista3',
+      dashboardId: 'permisos',
+      src: '/work/dashboards/amva/extras/permisos-vista-3.webp',
+    },
+  ],
   'medellin-dap': [
+    {
+      labelKey: 'extraJuridicoVista2',
+      dashboardId: 'juridico',
+      src: '/work/dashboards/medellin-dap/extras/juridico-vista-2.webp',
+    },
+    {
+      labelKey: 'extraJuridicoVista3',
+      dashboardId: 'juridico',
+      src: '/work/dashboards/medellin-dap/extras/juridico-vista-3.webp',
+    },
     {
       labelKey: 'extraGobernanza',
       src: '/work/dashboards/medellin-dap/extras/gobernanza-netlify.webp',

@@ -5,6 +5,8 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
 const LINKS = [
+  { href: '/work/vertex-rd', key: 'vertex' },
+  { href: '/work/medellin-cadastral', key: 'cadastral' },
   { href: '/work/amva', key: 'amva' },
   { href: '/work/medellin-dap', key: 'dap' },
   { href: '/work/rag-pot-medellin', key: 'rag' },

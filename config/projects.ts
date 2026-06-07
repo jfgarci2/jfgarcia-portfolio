@@ -1,4 +1,6 @@
 export type ProjectSlug =
+  | 'vertex-rd'
+  | 'medellin-cadastral'
   | 'amva'
   | 'medellin-dap'
   | 'rag-pot-medellin'
@@ -9,6 +11,8 @@ export type ProjectSlug =
   | 'open-data-colombia';
 
 export const PROJECT_SLUGS: ProjectSlug[] = [
+  'vertex-rd',
+  'medellin-cadastral',
   'amva',
   'medellin-dap',
   'rag-pot-medellin',
@@ -20,15 +24,20 @@ export const PROJECT_SLUGS: ProjectSlug[] = [
 ];
 
 export const WORK_ID_TO_SLUG: Record<string, ProjectSlug> = {
-  '01': 'amva',
-  '02': 'medellin-dap',
-  '03': 'devimed',
-  '04': 'bioexplora',
-  '05': 'iatech',
-  '06': 'antioquia',
+  '01': 'vertex-rd',
+  '02': 'medellin-cadastral',
+  '03': 'amva',
+  '04': 'medellin-dap',
+  '05': 'rag-pot-medellin',
+  '06': 'devimed',
+  '07': 'bioexplora',
+  '08': 'iatech',
+  '09': 'antioquia',
 };
 
 export const CASE_STUDY_SLUGS: ProjectSlug[] = [
+  'vertex-rd',
+  'medellin-cadastral',
   'amva',
   'medellin-dap',
   'rag-pot-medellin',

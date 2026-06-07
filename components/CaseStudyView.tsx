@@ -8,8 +8,23 @@ import CaseStudyDashboards from '@/components/CaseStudyDashboards';
 import { type ProjectSlug } from '@/config/projects';
 import { getProjectDashboards } from '@/data/dashboards';
 import { getDashboardGallery } from '@/lib/dashboard-gallery';
-import { RAG_DEMO_URL } from '@/lib/constants';
-import type { CaseStudyMetric } from '@/types/portfolio';
+import {
+  AMVA_DASHBOARD_URL,
+  AMVA_GITHUB_URL,
+  AMVA_REPORT_PDF_URL,
+  MEDELLIN_CADASTRAL_DEMO_URL,
+  MEDELLIN_CADASTRAL_GITHUB_URL,
+  RAG_DEMO_URL,
+  VERTEX_RD_DEMO_URL,
+  VERTEX_RD_GITHUB_URL,
+} from '@/lib/constants';
+import type { CaseStudyMetric, MockType } from '@/types/portfolio';
+
+function mockTypeForSlug(slug: ProjectSlug): MockType {
+  if (slug === 'vertex-rd' || slug === 'medellin-cadastral') return 'map';
+  if (slug === 'rag-pot-medellin' || slug === 'medellin-dap') return 'kpi';
+  return 'dashboard';
+}
 
 export default async function CaseStudyView({ slug }: { slug: ProjectSlug }) {
   const t = await getTranslations('caseStudies');
@@ -23,12 +38,22 @@ export default async function CaseStudyView({ slug }: { slug: ProjectSlug }) {
   const metrics = t.raw(`${slug}.metrics`) as CaseStudyMetric[];
   const dashboards = getProjectDashboards(slug);
   const hasGallery = getDashboardGallery(slug).length > 0;
+  const mockType = mockTypeForSlug(slug);
 
-  const mockType =
-    slug === 'rag-pot-medellin' ? 'kpi' : slug === 'medellin-dap' ? 'kpi' : 'dashboard';
-
-  const workItems = tWork.raw('items') as { slug: string; client: string; clientFull: string }[];
+  const workItems = tWork.raw('items') as {
+    slug: string;
+    client: string;
+    clientFull: string;
+    demoUrl?: string;
+    codeUrl?: string;
+    reportUrl?: string;
+  }[];
   const related = workItems.find((w) => w.slug === slug);
+
+  const ctaClass =
+    'group flex items-center justify-between rounded-xl bg-[#0A0A0A] p-5 text-white transition hover:bg-[#3B5BDB]';
+  const secondaryCtaClass =
+    'group flex items-center justify-between rounded-xl border border-stone-200 p-5 transition hover:border-[#3B5BDB]';
 
   return (
     <div className="min-h-screen bg-white">
@@ -123,30 +148,74 @@ export default async function CaseStudyView({ slug }: { slug: ProjectSlug }) {
           </section>
 
           <aside className="space-y-4">
+            {slug === 'vertex-rd' && (
+              <>
+                <a href={VERTEX_RD_DEMO_URL} target="_blank" rel="noopener noreferrer" className={ctaClass}>
+                  <span className="font-semibold">{t('demoLiveCta')}</span>
+                  <ArrowUpRight className="transition group-hover:opacity-80" size={18} />
+                </a>
+                <a href={VERTEX_RD_GITHUB_URL} target="_blank" rel="noopener noreferrer" className={secondaryCtaClass}>
+                  <span className="text-sm font-semibold">{t('codeCta')}</span>
+                  <ArrowUpRight size={18} className="text-[#3B5BDB]" />
+                </a>
+              </>
+            )}
+
+            {slug === 'medellin-cadastral' && (
+              <>
+                <a href={MEDELLIN_CADASTRAL_DEMO_URL} target="_blank" rel="noopener noreferrer" className={ctaClass}>
+                  <span className="font-semibold">{t('demoLiveCta')}</span>
+                  <ArrowUpRight className="transition group-hover:opacity-80" size={18} />
+                </a>
+                <a href={MEDELLIN_CADASTRAL_GITHUB_URL} target="_blank" rel="noopener noreferrer" className={secondaryCtaClass}>
+                  <span className="text-sm font-semibold">{t('codeCta')}</span>
+                  <ArrowUpRight size={18} className="text-[#3B5BDB]" />
+                </a>
+              </>
+            )}
+
+            {slug === 'amva' && (
+              <>
+                <a href={AMVA_DASHBOARD_URL} target="_blank" rel="noopener noreferrer" className={ctaClass}>
+                  <span className="font-semibold">{t('demoLiveCta')}</span>
+                  <ArrowUpRight className="transition group-hover:opacity-80" size={18} />
+                </a>
+                <a href={AMVA_GITHUB_URL} target="_blank" rel="noopener noreferrer" className={secondaryCtaClass}>
+                  <span className="text-sm font-semibold">{t('codeCta')}</span>
+                  <ArrowUpRight size={18} className="text-[#3B5BDB]" />
+                </a>
+                <a href={AMVA_REPORT_PDF_URL} target="_blank" rel="noopener noreferrer" className={secondaryCtaClass}>
+                  <span className="text-sm font-semibold">{t('reportCta')}</span>
+                  <ArrowUpRight size={18} className="text-[#3B5BDB]" />
+                </a>
+              </>
+            )}
+
             {slug === 'rag-pot-medellin' && (
-              <a
-                href={RAG_DEMO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-xl bg-[#0A0A0A] p-5 text-white transition hover:bg-[#3B5BDB]"
-              >
+              <a href={RAG_DEMO_URL} target="_blank" rel="noopener noreferrer" className={ctaClass}>
                 <span className="font-semibold">{t('ragLiveCta')}</span>
                 <ArrowUpRight className="transition group-hover:opacity-80" size={18} />
               </a>
             )}
 
             {slug === 'medellin-dap' && (
-              <Link
-                href="/work/rag-pot-medellin"
-                className="group flex items-center justify-between rounded-xl border border-stone-200 p-5 transition hover:border-[#3B5BDB]"
-              >
-                <span className="text-sm font-semibold">{t('ragCaseLink')}</span>
-                <ArrowUpRight size={18} className="text-[#3B5BDB]" />
-              </Link>
+              <>
+                <a href={MEDELLIN_CADASTRAL_DEMO_URL} target="_blank" rel="noopener noreferrer" className={ctaClass}>
+                  <span className="font-semibold">{t('cadastralDemoCta')}</span>
+                  <ArrowUpRight className="transition group-hover:opacity-80" size={18} />
+                </a>
+                <Link href="/work/rag-pot-medellin" className={secondaryCtaClass}>
+                  <span className="text-sm font-semibold">{t('ragCaseLink')}</span>
+                  <ArrowUpRight size={18} className="text-[#3B5BDB]" />
+                </Link>
+                <Link href="/work/medellin-cadastral" className={secondaryCtaClass}>
+                  <span className="text-sm font-semibold">{t('cadastralCaseLink')}</span>
+                  <ArrowUpRight size={18} className="text-[#3B5BDB]" />
+                </Link>
+              </>
             )}
           </aside>
         </div>
-
       </article>
       <Footer />
     </div>

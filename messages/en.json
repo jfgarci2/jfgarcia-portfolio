@@ -439,9 +439,9 @@
     "amva": {
       "permisosLive": "Live anonymized dashboard (Chart.js + Mapbox)",
       "permisos": "Environmental permit compliance (Power BI — screenshots)",
-      "planAccion": "Environmental presentation & action plan (screenshots)",
-      "sancionatorios": "Sanction workflows (screenshots)",
-      "arboles": "Urban tree-risk monitoring (screenshots)"
+      "planAccion": "Environmental presentation & action plan",
+      "sancionatorios": "Sanction workflows",
+      "arboles": "Urban tree-risk monitoring"
     },
     "medellin-dap": {
       "presentacionAmva": "Environmental presentation (AMVA)",
@@ -464,7 +464,7 @@
     "deliverables": "Deliverables",
     "metrics": "Key metrics",
     "galleryTitle": "Dashboard previews",
-    "gallerySub": "Production dashboard screenshots. Reports with PII are image-only; anonymized versions can be viewed live below.",
+    "gallerySub": "Production dashboard screenshots. Reports with PII (AMVA permits, DAP legal) are image-only; all others can be viewed live below.",
     "gallerySelect": "Click to preview",
     "gallerySelected": "Selected below",
     "viewLive": "View live",

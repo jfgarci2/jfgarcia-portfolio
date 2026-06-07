@@ -262,9 +262,9 @@
     "amva": {
       "permisosLive": "Tablero anonimizado en vivo (Chart.js + Mapbox)",
       "permisos": "Control de permisos ambientales (Power BI — capturas)",
-      "planAccion": "Presentación ambiental y plan de acción (capturas)",
-      "sancionatorios": "Flujos sancionatorios (capturas)",
-      "arboles": "Árboles en riesgo (capturas)"
+      "planAccion": "Presentación ambiental y plan de acción",
+      "sancionatorios": "Flujos sancionatorios",
+      "arboles": "Árboles en riesgo"
     },
     "medellin-dap": {
       "presentacionAmva": "Presentación ambiental (AMVA)",
@@ -287,7 +287,7 @@
     "deliverables": "Entregables",
     "metrics": "Métricas clave",
     "galleryTitle": "Vista previa de tableros",
-    "gallerySub": "Capturas de tableros en producción. Los informes con PII se muestran solo como imágenes; los anonimizados se pueden ver en vivo abajo.",
+    "gallerySub": "Capturas de tableros en producción. Los informes con PII (permisos AMVA, jurídico DAP) se muestran solo como imágenes; el resto se puede ver en vivo abajo.",
     "gallerySelect": "Clic para previsualizar",
     "gallerySelected": "Seleccionado abajo",
     "viewLive": "Ver en vivo",
